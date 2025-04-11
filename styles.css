@@ -394,16 +394,32 @@ header .container {
 }
 
 .social-icons a {
-    display: flex;
+    position: relative;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     background-color: var(--light-text);
     color: var(--primary-color);
     border-radius: 50%;
-    font-size: 1.5rem;
     transition: all 0.3s ease;
+    /* Remova qualquer margem ou padding que possa interferir */
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.social-icons a i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centralização precisa com transform */
+    font-size: 28px;
+    /* Remova qualquer margem ou padding */
+    margin: 0;
+    padding: 0;
+    line-height: 0;
 }
 
 .social-icons a:hover {
